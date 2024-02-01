@@ -1,20 +1,16 @@
 {
-    "builds": [{
-        "src": "learning/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.10"}
-    }],
-    "routes":[
+    "builds": [
+        {
+            "src": "learning/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.10"},
+            "functions": { "api/migrate": { "runtime": "python3.10", "memory": 512, "includeFiles": ["learning/migrate.py"] } }
+        }
+    ],
+    "routes": [
         {
             "src": "/(.*)",
             "dest": "learning/wsgi.py"
-        }
-    ],
-    "migrate": [
-        {
-            "runtime": "python3.10",
-            "memory": 512,
-            "includeFiles": ["learning/migrate.py"]
         }
     ]
 }
