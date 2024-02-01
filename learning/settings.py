@@ -90,7 +90,16 @@ WSGI_APPLICATION = 'learning.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '*-C45Cd3*EGfGD**eEb1-E5-Ba4*CecA',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '20657',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
