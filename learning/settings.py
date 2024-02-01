@@ -29,6 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app']
 
+CSRF_COOKIE_SECURE = True  
+CSRF_USE_SESSIONS = True
+
 
 # Application definition
 
