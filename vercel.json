@@ -20,12 +20,7 @@
     "migrate": {
       "runtime": "python3.10",
       "memory": 512,
-      "includeFiles": ["learning/migrate.py"],
-      "events": [
-        {
-          "schedule": "rate(1 hour)"
-        }
-      ]
+      "includeFiles": ["learning/migrate.py"]
     }
   }
 }
